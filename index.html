@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Shakib Sheikh" />
+    <meta name="author" content="Shakib Sheikh" />
+    <title>Shakib Sheikh Portfolio</title>
+    <meta
+      name="title"
+      content="Shakib Sheikh| Shakib Website | Professional Web Developer - Expert in WordPress, PHP, & Shopify"
+    />
+    <meta
+      name="description"
+      content="Welcome to Shakib Sheikh's portfolio! A skilled web developer specializing in WordPress, HTML, CSS, JavaScript, PHP, and Shopify. Crafting responsive websites that deliver seamless user experiences. Let's create something extraordinary!"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="pre-loader">
+      <div class="upload-loader"></div>
+    </div>
+    <!-- top info bar -->
+    <div class="info-nav">
+      <div class="num">
+        <ul>
+          <li>
+            <a href="tel:9117492652" target="_blank" rel="nofollow"
+              ><i class="fa-solid fa-phone"></i>9117492652</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="nav-social">
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/shakib-alam-6114a2253/"
+              target="_blank"
+              rel="nofollow"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/alamshaki"
+              target="_blank"
+              rel="nofollow"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="mailto:digitalcreating8@gmail.com"
+              target="_blank"
+              rel="nofollow"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://wa.me/9117492652" target="_blank" rel="nofollow"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Navbar || Header -->
+    <div class="navbar">
+      <div class="logo">
+        <h1>.Shakib</h1>
+      </div>
+      <div class="drkmode" style="display: flex">
+        <img
+          src="dark_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+          onclick="ChangeBackground()"
+          class="icon"
+        />
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="why-chose.html">Why Choose Us?</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="openmenu-icon" onclick="OpenMobileMenu()">
+        <img
+          src="menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+          class="icon"
+        />
+      </div>
+    </div>
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+      <div class="mobile-nav-menu">
+        <div class="close-menu-icon" onclick="CloseMobileMenu()">
+          <img
+            src="close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+            class="icon"
+            style="padding: 8px"
+          />
+        </div>
+
+        <ul>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-house"></i
+            ><a href="index.html" class="active">Home</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-user"></i><a href="about.html">About Us</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-person"></i
+            ><a href="why-chose.html">Why Choose Us?</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-tarp-droplet"></i
+            ><a href="projects.html">Projects</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-briefcase"></i
+            ><a href="#experience">Experience</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-kitchen-set"></i
+            ><a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Main content or Hero section -->
+    <div class="main">
+      <div class="main-content">
+        <span>Hii</span>
+        <h1>
+          I'm <span id="myname"> Shakib Sheikh </span><br />
+          Web Developer
+        </h1>
+        <p>
+          Hi, I'm Shakib Sheikh, a passionate Web Developer with expertise in
+          crafting dynamic and responsive websites. I specialize in using
+          technologies like WordPress, HTML, CSS, JavaScript, PHP, and Shopify
+          to deliver seamless user experiences and bring creative ideas to life.
+          Let's build something amazing together!
+        </p>
+        <div class="main-btn">
+          <div class="hire-btn">
+            <a href="mailto:digitalcreatings8@gmail.com">Hire Me!</a>
+          </div>
+          <div class="download">
+            <a href="" id="cv"
+              >Download CV <i class="fa-solid fa-download"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-img">
+        <div class="img"></div>
+      </div>
+    </div>
+
+    <!-- this section will define the all about the about section -->
+
+    <div class="about-us" id="about-us">
+      <h2 id="about-heading">About Us</h2>
+      <div class="about">
+        <div class="about-img">
+          <img src="about-us.png" alt="" height="" class="about-image" />
+        </div>
+        <div class="about-content">
+          <h3 id="about-content-heading">About Me</h3>
+          <p>
+            Hi, I’m Shakib Sheikh, a passionate Web Developer dedicated to
+            crafting dynamic, user-friendly, and visually appealing websites.
+            With a strong foundation in front-end and back-end development, I
+            specialize in creating seamless digital experiences that meet both
+            user needs and business goals.
+          </p>
+
+          <p>
+            I thrive on transforming ideas into reality using clean, efficient
+            code and modern web technologies. Proficient in HTML, CSS,
+            JavaScript, and popular CMS like Wordpress and sopify popular
+            frameworks like bootstrap and Talwind, I focus on responsive design
+            to ensure that websites perform flawlessly across all devices. On
+            the back-end, I’m skilled in technologies like PHP and MySQL,
+            scalable applications.
+          </p>
+
+          <p>
+            Beyond technical skills, I’m deeply committed to staying updated
+            with the ever-evolving web development landscape. Whether it’s
+            exploring new libraries, optimizing site performance, or enhancing
+            accessibility, I strive to deliver solutions that exceed
+            expectations.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- this section will define the Skill section -->
+
+    <div class="skills-about" id="target-section">
+      <h2 id="technologies">Technologies</h2>
+      <p id="technologies-decs">
+        Using these technologies, I build websites and web applications with the
+        following proficiencies: that has mentioned below
+      </p>
+      <div class="skills">
+        <div class="programing-language">
+          <div class="skills-name">
+            <h2>Programing Languages</h2>
+          </div>
+          <h2 id="skill-heading">HTML</h2>
+          <div class="progress-bar">
+            <div class="html"><span>90%</span></div>
+          </div>
+          <h2 id="skill-heading">JavaScript</h2>
+          <div class="progress-bar">
+            <div class="javascript"><span>75%</span></div>
+          </div>
+          <h2 id="skill-heading">PHP</h2>
+          <div class="progress-bar">
+            <div class="php"><span>65%</span></div>
+          </div>
+          <h2 id="skill-heading">C++</h2>
+          <div class="progress-bar">
+            <div class="cpp"><span>50%</span></div>
+          </div>
+        </div>
+        <div class="database">
+          <div class="skills-name">
+            <h2>Database & Others</h2>
+          </div>
+          <h2 id="skill-heading">MySql</h2>
+          <div class="progress-bar">
+            <div class="mysql"><span>60%</span></div>
+          </div>
+          <h2 id="skill-heading">MongoDB</h2>
+          <div class="progress-bar">
+            <div class="mongodb"><span>40%</span></div>
+          </div>
+          <h2 id="skill-heading">Git Hub</h2>
+          <div class="progress-bar">
+            <div class="git"><span>50%</span></div>
+          </div>
+        </div>
+
+        <div class="cms">
+          <div class="skills-name">
+            <h2>CMS & UI</h2>
+          </div>
+          <h2 id="skill-heading">CSS</h2>
+          <div class="progress-bar">
+            <div class="css"><span>85%</span></div>
+          </div>
+          <h2 id="skill-heading">Bootstraps</h2>
+          <div class="progress-bar">
+            <div class="bootstrap"><span>70%</span></div>
+          </div>
+
+          <h2 id="skill-heading">WordPress</h2>
+          <div class="progress-bar">
+            <div class="wordpress"><span>70%</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- this section will define the experience section -->
+
+    <h2 class="experince-heading" id="experience">Experience</h2>
+    <div class="experince">
+      <div class="experince-content">
+        <h3 class="experince-content-heading">
+          Experience with a Digital Creating Pvt Ltd
+        </h3>
+        <p style="margin-bottom: 12px">
+          For the past eight months, I have been collaborating with a digital
+          creating company, honing my expertise in crafting engaging web
+          solutions. My role involves designing user-friendly interfaces,
+          integrating advanced functionalities, and optimizing website
+          performance.
+        </p>
+        <p>
+          This hands-on experience has deepened my understanding of the digital
+          landscape, strengthened my problem-solving skills, and allowed me to
+          contribute to impactful projects. Working in a dynamic team
+          environment, I have successfully delivered creative solutions that
+          meet client expectations while adhering to industry best practices.
+        </p>
+      </div>
+      <div class="experince-img">
+        <img src="experience 1.png" alt="" class="experience-image" />
+      </div>
+    </div>
+    <div class="experince1">
+      <div class="experince1-img">
+        <img src="experince 2.png" alt="" class="experience-image1" />
+      </div>
+      <div class="experince-content1">
+        <h3 class="experince-content-heading">
+          Experience with a Lavanya Gurukul School Bhopal
+        </h3>
+        <p style="margin-bottom: 12px">
+          Completed a six-month internship as a Front-End Developer at Lavanya
+          Gurukul School, Bhopal. Proficient in HTML, CSS, JavaScript,
+          Bootstrap, and Tailwind CSS. Designed and developed responsive web
+          pages, enhancing user experience and interface design. Collaborated
+          with cross-functional teams to implement modern web design practices
+          and ensure compatibility across various browsers and devices.
+        </p>
+        <p>
+          This hands-on experience has deepened my understanding of the digital
+          landscape, strengthened my problem-solving skills, and allowed me to
+          contribute to impactful projects.
+        </p>
+      </div>
+    </div>
+    <h2 class="experince-heading">Why Chose Us?</h2>
+    <div class="why-chose" id="why-chose">
+      <div class="chose1">
+        <h3><span>1</span>Expertise and Experience</h3>
+        <p>
+          "With years of experience in [Web Development], I bring a wealth of
+          knowledge and skills to every project. My expertise ensures that you
+          receive top-notch solutions tailored to your needs."
+        </p>
+      </div>
+      <div class="chose2">
+        <h3><span>2</span>Tailored Solutions for Your Needs</h3>
+        <p>
+          "Every project is unique, and so are the solutions I provide. By
+          understanding your specific requirements, I deliver custom-tailored
+          services that perfectly align with your vision and goals."
+        </p>
+      </div>
+      <div class="chose3">
+        <h3><span>3</span>Proven Expertise and Experience</h3>
+        <p>
+          "With a rich background in [Web Development , Web Design], I have
+          successfully completed numerous projects, ensuring top-quality results
+          and satisfied clients. "
+        </p>
+      </div>
+      <div class="chose4">
+        <h3><span>4</span>Commitment to Excellence</h3>
+        <p>
+          "I am dedicated to delivering exceptional work that exceeds
+          expectations. Attention to detail and a passion for perfection drive
+          every project I undertake, ensuring that the end product stands out."
+        </p>
+      </div>
+      <div class="chose5">
+        <h3><span>5</span>Clear and Consistent Communication</h3>
+        <p>
+          "Clear and consistent communication is key to a successful project. I
+          keep you updated at every stage of the process, ensuring that your
+          feedback is valued and incorporated into the final outcome."
+        </p>
+      </div>
+      <div class="chose6">
+        <h3><span>6</span>Innovative and Creative Solutions</h3>
+        <p>
+          "I bring fresh perspectives and innovative ideas to every project,
+          ensuring that the final product is not only functional but also
+          creatively unique and visually appealing."
+        </p>
+      </div>
+    </div>
+    <!-- this section will define the Projects section -->
+    <h2 class="project-heading">Projects</h2>
+    <div class="projects" id="projects">
+      <div class="project-swiper">
+        <div class="project-image">
+          <img src="seotonic.webp" alt="" />
+        </div>
+        <div class="project-content">
+          <h4 style="color: black; font-size: 21px">Seotonic</h4>
+          <p>
+            Seotonic is a leading company specializing in SEO and content
+            writing services at an international level. Built using WordPress
+            and PHP, it showcases expertise in delivering high-quality digital
+            marketing solutions and boosting online visibility for businesses
+            globally.
+          </p>
+          <a
+            href="https://www.seotonic.com/"
+            target="_blank"
+            rel="nofollow"
+            class="view-more"
+            >View More</a
+          >
+        </div>
+      </div>
+      <div class="project-swiper">
+        <div class="project-image">
+          <img src="Douglashallkennelslogo-300x85-1.png" alt="" />
+        </div>
+        <div class="project-content">
+          <h4 style="color: black; font-size: 21px">Douglas Hall</h4>
+          <p>
+            Douglas Hall Kennels, a licensed dog breeder and pet shop in
+            Lancashire, England, specializes in healthy, well-tempered dogs like
+            Beagles, Bichon Frise, and Cocker Spaniels. Built on WordPress &
+            php, they prioritize exceptional care, quality breeding, and
+            offering a wide variety of breeds.
+          </p>
+          <a
+            href="https://www.douglashallkennels.co.uk/"
+            target="_blank"
+            rel="nofollow"
+            class="view-more"
+            >View More</a
+          >
+        </div>
+      </div>
+      <div class="project-swiper">
+        <div class="project-image">
+          <img src="neuro.png" alt="" />
+        </div>
+        <div class="project-content">
+          <h4 style="color: black; font-size: 21px">Neuro Experts, PC</h4>
+          <p>
+            Designed and developed the Neuro Experts, PC website using HTML,
+            CSS, JavaScript, PHP, and WordPress. The platform effectively
+            showcases advanced neuroradiology services with a user-friendly
+            interface, seamless navigation, and reliable functionality for
+            diverse clients.
+          </p>
+          <a
+            href="https://neuroradiologyexpert.com/"
+            target="_blank"
+            rel="nofollow"
+            class="view-more"
+            >View More</a
+          >
+        </div>
+      </div>
+      <div class="project-swiper">
+        <div class="project-image">
+          <img src="tic-tac-toe.jpg" alt="" />
+        </div>
+        <div class="project-content">
+          <h4 style="font-size: 21px; color: black">Tic-Tac-Toe Game</h4>
+          <p>
+            I developed an engaging Tic Tac Toe game using HTML, CSS, and
+            JavaScript. The game allows two players to input their names and
+            compete against each other, offering an interactive and dynamic
+            experience with responsive design and seamless functionality.
+          </p>
+          <a
+            href="https://alamshaki.github.io/Tic-Tac-Toe-game/"
+            target="_blank"
+            rel="nofollow"
+            class="view-more"
+            >View More</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- this is a testimoniol section -->
+    <h2 class="testimoniol-heading">Client Testimonials</h2>
+    <p class="testimoniol-para">
+      Explore firsthand the remarkable experiences and testimonials shared by
+      our clients, highlighting our exceptional service and satisfaction.
+    </p>
+    <div class="testimoniol">
+      <div class="testiimoniol-wrapper">
+        <div class="testimoniol-content">
+          <p>
+            Working with Shakib was a seamless and rewarding experience. His
+            professionalism, creativity, and attention to detail were
+            remarkable. He delivered exceptional quality, exceeding all
+            expectations with a solution that was both innovative and effective.
+            I highly recommend Shakib for his expertise, dedication, and ability
+            to bring ideas to life flawlessly.
+          </p>
+        </div>
+        <div class="client-details">
+          <div class="client-img"></div>
+          <div class="client-name">
+            <p><span>Punnet Tiwari</span></p>
+            <p><span>CEO of Digital Creatings</span></p>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="testiimoniol-wrapper">
+        <div class="testimoniol-content">
+          <p>
+            Exceptional service with great attention to detail. The project was
+            completed efficiently and to a very high standard. Communication was
+            clear and timely, making the entire process seamless. The results
+            exceeded expectations, and I would highly recommend this service to
+            anyone looking for professionalism and quality work.
+          </p>
+        </div>
+        <div class="client-details">
+          <div class="client-img1"></div>
+          <div class="client-name">
+            <p><span>Shami Ahmad</span></p>
+            <p><span>Founder of Dreams Bhopal</span></p>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="testiimoniol-wrapper">
+        <div class="testimoniol-content">
+          <p>
+            Shakib delivered outstanding service with remarkable professionalism
+            and efficiency. His attention to detail and dedication to excellence
+            truly set him apart. The quality of his work exceeded our
+            expectations, and his ability to understand our needs made the
+            entire process seamless. We are extremely satisfied and highly
+            recommend Shakib for any project requiring top-notch expertise.
+          </p>
+        </div>
+        <div class="client-details">
+          <div class="client-img2"></div>
+          <div class="client-name">
+            <p><span>Shahnawaz Ali</span></p>
+            <p><span>Project Manger of SeoTonic</span></p>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+    <!-- this is a footer section -->
+    <footer>
+      <form action="" id="contactForm">
+        <h3 style="text-align: center">Drop Us A Line</h3>
+        <input type="text" id="name" placeholder="Dohn Joe" required />
+        <input
+          type="email"
+          id="email"
+          placeholder="alamshakib378@gmail.com"
+          required
+        />
+        <input type="number" id="number" placeholder="9117492652" required />
+        <textarea
+          name=""
+          id="message"
+          cols="40"
+          rows="5"
+          placeholder="You'r Message"
+        ></textarea>
+        <button type="button" id="submit" onclick="sendEmail()">Submit</button>
+      </form>
+      <div class="important-link">
+        <h3>Important Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experince">Experience</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="why-chose.html">Why Choose Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="footer-social-icon">
+          <h3>Follow Me On Social Media</h3>
+          <div class="social">
+            <a href="https://www.facebook.com/share/1HCBszHn3M/" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/shakibsheikh5423?igsh=b29xeDZ1YjFoczV0"
+              target="_blank"
+              ><i class="fa-brands fa-instagram" style="padding: 7px 9px"></i
+            ></a>
+            <a href="https://github.com/alamshaki" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/shakib-alam-6114a2253/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin" style="padding: 8px 9px"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-us">
+        <h3>Information</h3>
+        <ul footer-information-link>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>Address: Housing Board
+            Krondh Bhopal (462038)
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope"></i
+            ><a href="mailto:-alamshaki332@gmail.com" style="color: white"
+              >Email Id:- alamshakib332@gmail.com</a
+            >
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i
+            ><a href="tel:- 9117492652" style="color: white"
+              >Phone:- 9117492652</a
+            >
+          </li>
+          <li>
+            <i class="fa-brands fa-whatsapp"></i
+            ><a href="tel:- 9117492652" style="color: white"
+              >Whatsapp:- 9117492652</a
+            >
+          </li>
+        </ul>
+        <h3 style="margin-top: 20px">Services</h3>
+        <ul>
+          <li><i class="fa-brands fa-codepen"></i>Statics Website</li>
+          <li><i class="fa-solid fa-globe"></i>Dynamic WebApplication</li>
+          <li><i class="fa-solid fa-snowflake"></i>Logo Design</li>
+          <li><i class="fa-brands fa-squarespace"></i>Other</li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- this is a copyright section -->
+    <div
+      class="copyright"
+      style="background-color: #17193e; border-top: 1px solid gray"
+    >
+      <p style="text-align: center; padding: 8px; color: white">
+        © 2025 Shakib. All Rights Reserved.
+      </p>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "7jP9w5U0iNzud7SV3",
+        });
+      })();
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
