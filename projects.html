@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="Shakib Sheikh" />
+    <meta name="author" content="Shakib Sheikh" />
+    <title>Shakib Sheikh Portfolio</title>
+    <meta
+      name="title"
+      content="Shakib Sheikh| Shakib Website | Shakib | Shakib Projects"
+    />
+    <meta
+      name="description"
+      content="Welcome to Shakib Sheikh's portfolio! A skilled web developer specializing in WordPress, HTML, CSS, JavaScript, PHP, and Shopify. Crafting responsive websites that deliver seamless user experiences. Let's create something extraordinary!"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="pre-loader">
+      <div class="upload-loader"></div>
+    </div>
+    <!-- top info bar -->
+    <div class="info-nav">
+      <div class="num">
+        <ul>
+          <li>
+            <a href="tel:9117492652" target="_blank" rel="nofollow"
+              ><i class="fa-solid fa-phone"></i
+              ><span style="color: white">9117492652</span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="nav-social">
+        <ul>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/shakib-alam-6114a2253/"
+              target="_blank"
+              rel="nofollow"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/alamshaki"
+              target="_blank"
+              rel="nofollow"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="mailto:digitalcreating8@gmail.com"
+              target="_blank"
+              rel="nofollow"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://wa.me/9117492652" target="_blank" rel="nofollow"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Navbar || Header -->
+    <div class="navbar">
+      <div class="logo">
+        <h1>.Shakib</h1>
+      </div>
+      <div class="drkmode" style="display: flex">
+        <img
+          src="dark_mode_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+          onclick="ChangeBackground()"
+          class="icon"
+        />
+      </div>
+      <div class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="why-chose.html">Why Choose Us?</a></li>
+          <li>
+            <a
+              href="projects.html"
+              class="active"
+              style="color: orangered !important"
+              >Projects</a
+            >
+          </li>
+          <li><a href="index.html">Experience</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="openmenu-icon" onclick="OpenMobileMenu()">
+        <img
+          src="menu_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+          alt=""
+          class="icon"
+        />
+      </div>
+    </div>
+    <!-- Mobile Navbar -->
+    <div class="mobile-navbar">
+      <div class="mobile-nav-menu">
+        <div class="close-menu-icon" onclick="CloseMobileMenu()">
+          <img
+            src="close_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.svg"
+            alt=""
+            class="icon"
+            style="padding: 8px"
+          />
+        </div>
+
+        <ul>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-house"></i
+            ><a href="index.html" class="active">Home</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-user"></i><a href="about.html">About Us</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-person"></i
+            ><a href="why-chose.html">Why Choose Us?</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-tarp-droplet"></i
+            ><a href="projects.html">Projects</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-briefcase"></i
+            ><a href="#experience">Experience</a>
+          </li>
+          <li id="mob-nav-item">
+            <i class="fa-solid fa-kitchen-set"></i
+            ><a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="projects-main-container">
+      <div class="projects-main-container-content">
+        <div class="breadcrumbs">
+          <a href="index.html"><span style="color: white">Home</span></a>
+          <span style="color: white">></span>
+          <a href="projects.html"><span class="active">Projects</span></a>
+        </div>
+        <div class="project-content">
+          <h1>Projects</h1>
+          <p>
+            Welcome to my Projects Showcase! Here, I present my web development
+            journey, featuring innovative and functional projects. Explore my
+            work, witness creativity in action, and get inspired by digital
+            possibilities!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="projects-container">
+      <div class="project-container-content">
+        <h2>Creative Projects, Seamless Experiences</h2>
+        <p>
+          This section is a collection of my best projects, where design meets
+          functionality. From dynamic websites to interactive web applications,
+          each project is a testament to my passion for coding. Dive in and
+          discover the creativity and technical expertise behind every creation.
+          Let’s build something amazing together!
+        </p>
+      </div>
+      <div class="define-project">
+        <div class="define-project-content">
+          <h2>E-lins</h2>
+          <h3>What is E-lins</h3>
+          <p>
+            E-Lins is a China-based multisite specializing in selling new
+            hardware products, including routers, modems, and other networking
+            devices, ensuring high performance, reliability, and cutting-edge
+            technology for seamless connectivity.
+          </p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-check"></i>Trusted by businesses and
+              individuals for networking solutions.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Provides cutting-edge hardware at
+              competitive market prices.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Wide range of wireless and wired
+              networking products available.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Dedicated to innovation and
+              customer satisfaction in hardware sales.
+            </li>
+          </ul>
+          <h3>Behind the Scenes: My Contributions</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-check"></i>Implemented WordPress for content
+              management.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Designed and styled the website
+              for responsiveness using wordpress.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Created a dynamic language
+              switcher using php & javascript.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Integrated JavaScript for smooth
+              language transitions.
+            </li>
+            <li><i class="fa-solid fa-check"></i>Others</li>
+          </ul>
+          <a href="https://e-lins.com/" id="poject-link"
+            >Show Project<i
+              class="fa-solid fa-arrow-right"
+              style="margin-left: 10px"
+            ></i
+          ></a>
+        </div>
+        <div class="define-project-logo">
+          <img src="E-lins-new-logo.png" alt="" id="logo-img" />
+          <h3 style="align-self: flex-start; margin-top: 40px">
+            Technologies Used in This Project
+          </h3>
+          <p id="technology-para">
+            This project utilizes modern web technologies to ensure a seamless,
+            responsive, and visually appealing experience. The tech stack
+            includes front-end and back-end tools that enhance performance,
+            accessibility, and functionality, ensuring an optimized and engaging
+            user interface across all devices.
+          </p>
+          <div class="used-technology">
+            <div class="project-skill">
+              <div class="outer">
+                <div class="inner">
+                  <div class="tec">Wordpress</div>
+                  <div id="num">50%</div>
+                </div>
+              </div>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="project-skill">
+              <div class="outer">
+                <div class="inner">
+                  <div class="tec">Php</div>
+                  <div id="num">30%</div>
+                </div>
+              </div>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  stroke-linecap="round"
+                  id="second-last"
+                />
+              </svg>
+            </div>
+            <div class="project-skill">
+              <div class="outer">
+                <div class="inner">
+                  <div class="tec">javascript</div>
+                  <div id="num">20%</div>
+                </div>
+              </div>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  stroke-linecap="round"
+                  id="last-circle"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="define-project">
+        <div class="define-project-content">
+          <h2>Poushtik</h2>
+          <h3>What is E-lins</h3>
+          <p>
+            E-Lins is a China-based multisite specializing in selling new
+            hardware products, including routers, modems, and other networking
+            devices, ensuring high performance, reliability, and cutting-edge
+            technology for seamless connectivity.
+          </p>
+          <ul>
+            <li>
+              <i class="fa-solid fa-check"></i>Trusted by businesses and
+              individuals for networking solutions.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Provides cutting-edge hardware at
+              competitive market prices.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Wide range of wireless and wired
+              networking products available.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Dedicated to innovation and
+              customer satisfaction in hardware sales.
+            </li>
+          </ul>
+
+          <h3>Behind the Scenes: My Contributions</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-check"></i>Implemented WordPress for content
+              management.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Designed and styled the website
+              for responsiveness using wordpress.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Created a dynamic language
+              switcher using php & javascript.
+            </li>
+            <li>
+              <i class="fa-solid fa-check"></i>Integrated JavaScript for smooth
+              language transitions.
+            </li>
+            <li><i class="fa-solid fa-check"></i>Others</li>
+          </ul>
+          <a href="https://www.poushtik.co.in/" id="poject-link"
+            >Show Project<i
+              class="fa-solid fa-arrow-right"
+              style="margin-left: 10px"
+            ></i
+          ></a>
+        </div>
+        <div class="define-project-logo">
+          <img src="poushtik-logo.png" alt="" id="logo-img1" />
+          <h3 style="align-self: flex-start; margin-top: 40px">
+            Technologies Used in This Project
+          </h3>
+          <p id="technology-para">
+            This project utilizes modern web technologies to ensure a seamless,
+            responsive, and visually appealing experience. The tech stack
+            includes front-end and back-end tools that enhance performance,
+            accessibility, and functionality, ensuring an optimized and engaging
+            user interface across all devices.
+          </p>
+          <div class="used-technology">
+            <div class="project-skill">
+              <div class="outer">
+                <div class="inner">
+                  <div class="tec">Wordpress</div>
+                  <div id="num">50%</div>
+                </div>
+              </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle cx="80" cy="80" r="70" stroke-linecap="round" />
+              </svg>
+            </div>
+            <div class="project-skill">
+              <div class="outer">
+                <div class="inner">
+                  <div class="tec">Php</div>
+                  <div id="num">30%</div>
+                </div>
+              </div>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  stroke-linecap="round"
+                  id="second-last"
+                />
+              </svg>
+            </div>
+            <div class="project-skill">
+              <div class="outer">
+                <div class="inner">
+                  <div class="tec">javascript</div>
+                  <div id="num">20%</div>
+                </div>
+              </div>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                version="1.1"
+                width="160px"
+                height="160px"
+              >
+                <defs>
+                  <linearGradient id="GradientColor">
+                    <stop offset="0%" stop-color="#e91e63" />
+                    <stop offset="100%" stop-color="#673ab7" />
+                  </linearGradient>
+                </defs>
+                <circle
+                  cx="80"
+                  cy="80"
+                  r="70"
+                  stroke-linecap="round"
+                  id="last-circle"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="testimoniol-heading">Client Testimonials</h2>
+    <p class="testimoniol-para">
+      Explore firsthand the remarkable experiences and testimonials shared by
+      our clients, highlighting our exceptional service and satisfaction.
+    </p>
+    <div class="testimoniol">
+      <div class="testiimoniol-wrapper">
+        <div class="testimoniol-content">
+          <p>
+            Working with Shakib was a seamless and rewarding experience. His
+            professionalism, creativity, and attention to detail were
+            remarkable. He delivered exceptional quality, exceeding all
+            expectations with a solution that was both innovative and effective.
+            I highly recommend Shakib for his expertise, dedication, and ability
+            to bring ideas to life flawlessly.
+          </p>
+        </div>
+        <div class="client-details">
+          <div class="client-img"></div>
+          <div class="client-name">
+            <p><span>Punnet Tiwari</span></p>
+            <p><span>CEO of Digital Creatings</span></p>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="testiimoniol-wrapper">
+        <div class="testimoniol-content">
+          <p>
+            Exceptional service with great attention to detail. The project was
+            completed efficiently and to a very high standard. Communication was
+            clear and timely, making the entire process seamless. The results
+            exceeded expectations, and I would highly recommend this service to
+            anyone looking for professionalism and quality work.
+          </p>
+        </div>
+        <div class="client-details">
+          <div class="client-img1"></div>
+          <div class="client-name">
+            <p><span>Shami Ahmad</span></p>
+            <p><span>Founder of Dreams Bhopal</span></p>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+      <div class="testiimoniol-wrapper">
+        <div class="testimoniol-content">
+          <p>
+            Shakib delivered outstanding service with remarkable professionalism
+            and efficiency. His attention to detail and dedication to excellence
+            truly set him apart. The quality of his work exceeded our
+            expectations, and his ability to understand our needs made the
+            entire process seamless. We are extremely satisfied and highly
+            recommend Shakib for any project requiring top-notch expertise.
+          </p>
+        </div>
+        <div class="client-details">
+          <div class="client-img2"></div>
+          <div class="client-name">
+            <p><span>Shahnawaz Ali</span></p>
+            <p><span>Project Manger of SeoTonic</span></p>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </div>
+    <!-- this is a footer section -->
+    <footer>
+      <form action="" id="contactForm">
+        <h3 style="text-align: center">Drop Us A Line</h3>
+        <input type="text" id="name" placeholder="Dohn Joe" required />
+        <input
+          type="email"
+          id="email"
+          placeholder="alamshakib378@gmail.com"
+          required
+        />
+        <input type="number" id="number" placeholder="9117492652" required />
+        <textarea
+          name=""
+          id="message"
+          cols="40"
+          rows="5"
+          placeholder="You'r Message"
+        ></textarea>
+        <button type="button" id="submit" onclick="sendEmail()">Submit</button>
+      </form>
+      <div class="important-link">
+        <h3>Important Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experince">Experience</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="why-chose.html">Why Choose Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="footer-social-icon">
+          <h3>Follow Me On Social Media</h3>
+          <div class="social">
+            <a href="https://www.facebook.com/share/1HCBszHn3M/" target="_blank"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/shakibsheikh5423?igsh=b29xeDZ1YjFoczV0"
+              target="_blank"
+              ><i class="fa-brands fa-instagram" style="padding: 7px 9px"></i
+            ></a>
+            <a href="https://github.com/alamshaki" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/shakib-alam-6114a2253/"
+              target="_blank"
+              ><i class="fa-brands fa-linkedin" style="padding: 8px 9px"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-us">
+        <h3>Information</h3>
+        <ul footer-information-link>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>Address: Housing Board
+            Krondh Bhopal (462038)
+          </li>
+          <li>
+            <i class="fa-regular fa-envelope"></i
+            ><a href="mailto:-alamshaki332@gmail.com" style="color: white"
+              >Email Id:- alamshakib332@gmail.com</a
+            >
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i
+            ><a href="tel:- 9117492652" style="color: white"
+              >Phone:- 9117492652</a
+            >
+          </li>
+          <li>
+            <i class="fa-brands fa-whatsapp"></i
+            ><a href="tel:- 9117492652" style="color: white"
+              >Whatsapp:- 9117492652</a
+            >
+          </li>
+        </ul>
+        <h3 style="margin-top: 20px">Services</h3>
+        <ul>
+          <li><i class="fa-brands fa-codepen"></i>Statics Website</li>
+          <li><i class="fa-solid fa-globe"></i>Dynamic WebApplication</li>
+          <li><i class="fa-solid fa-snowflake"></i>Logo Design</li>
+          <li><i class="fa-brands fa-squarespace"></i>Other</li>
+        </ul>
+      </div>
+    </footer>
+    <!-- this is a copyright section -->
+    <div
+      class="copyright"
+      style="background-color: #17193e; border-top: 1px solid gray"
+    >
+      <p style="text-align: center; padding: 8px; color: white">
+        © 2025 Shakib. All Rights Reserved.
+      </p>
+    </div>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "7jP9w5U0iNzud7SV3",
+        });
+      })();
+    </script>
+    <script src="script.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        setTimeout(() => {
+          const preloader = document.querySelector(".pre-loader");
+          preloader.style.display = "none";
+          let footer = document.querySelector("footer");
+          footer.style.display = "flex";
+          let navbar = document.querySelector(".navbar");
+          navbar.style.display = "flex";
+        }, 300);
+      });
+    </script>
+  </body>
+</html>
