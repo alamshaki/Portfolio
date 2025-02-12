@@ -571,11 +571,7 @@ li{
     height: 7px;
     background-color: #fc0303;
 }
-@keyframes git {
-    100%{
-        width: 50%;
-    }
-}
+
 .bootstrap{
     width: 0px;
     height: 6px;
