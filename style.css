@@ -567,7 +567,7 @@ li{
     }
 }
 .git{
-    width: 0px;
+    width: 50%;
     height: 7px;
     background-color: #fc0303;
 }
