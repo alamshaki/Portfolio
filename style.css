@@ -924,6 +924,9 @@ footer .important-link{
     position: relative;
     z-index: 2222;
 }
+footer .important-link ul li{
+    display:flex !important;
+}
 footer  ul li a{
     font-size: 17px;
     color: white !important;
