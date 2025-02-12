@@ -231,7 +231,7 @@ window.addEventListener("load", ()=>{
     footer.style.display = "flex";
     let navbar = document.querySelector(".navbar");
     navbar.style.display = "flex";
-  }, 700);
+  }, 50);
 })
 
 
