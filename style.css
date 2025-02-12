@@ -906,6 +906,9 @@ footer{
     background-size: cover;
     position: relative;
 }
+footer ul li {
+    display:flex;
+}
 footer::before{
     content: "";
     background-color: rgba(0, 0, 0, 0.74);
