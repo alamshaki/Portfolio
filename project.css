@@ -231,7 +231,7 @@ svg{
 
 @media (max-width: 768px) {
   .projects-main-container{
-    height: 80vh;
+    height: 70vh;
   }
     .project-content{
         width: 98%;
