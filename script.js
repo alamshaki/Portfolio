@@ -1,18 +1,25 @@
 
-const OpenMobileMenu = () => {
-    setTimeout(() => {
-      let MobileMenu = document.querySelector(".mobile-navbar");
-      MobileMenu.style.display = "flex";
-    }, 500);
-  };
-const CloseMobileMenu = () =>{
-    let MobileMenu = document.querySelector(".mobile-navbar");
+const CloseMobileMenuByBody = () => {
+  let MobileMenu = document.querySelector(".mobile-navbar");
+  let MenuToggle = document.querySelector(".openmenu-icon");
+  let CloseButton = document.querySelector(".close-menu-icon");
+  MenuToggle.addEventListener("click", (event) => {
+    event.stopPropagation();
+    MobileMenu.style.display = "flex";
+  });
+  CloseButton.addEventListener("click", (event) => {
+    event.stopPropagation();
     MobileMenu.style.display = "none";
-
-}
+  });
+  document.body.addEventListener("click", (event) => {
+    if (MobileMenu.style.display === "flex" && !MobileMenu.contains(event.target) && !MenuToggle.contains(event.target)) {
+      MobileMenu.style.display = "none";
+    }
+  });
+};
+document.addEventListener("DOMContentLoaded", CloseMobileMenuByBody);
 
 let MobileNavItem = document.querySelectorAll("#mob-nav-item");
-
 MobileNavItem.forEach((MobNavItem) =>{
   MobNavItem.addEventListener("click", () =>{
     CloseMobileMenu();
