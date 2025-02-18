@@ -234,9 +234,9 @@
     height: 70vh;
   }
   .about-main {
-    width: 90%;
+    width: 95%;
     padding: 10px;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
   .about-image {
     width: 100%;
