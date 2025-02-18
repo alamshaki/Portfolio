@@ -42,7 +42,7 @@
     color: white !important;
     z-index: 999;
 }
-..contact-main-container .container-content p{
+.contact-main-container .container-content p{
     width: 50%;
     text-align: center;
     z-index: 999;
