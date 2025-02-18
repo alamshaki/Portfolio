@@ -42,7 +42,7 @@
     color: white !important;
     z-index: 999;
 }
-.why-chose-container .container-content p{
+..contact-main-container .container-content p{
     width: 50%;
     text-align: center;
     z-index: 999;
@@ -51,7 +51,9 @@
     border-bottom: 1px solid white;
     z-index: 99999;
   }
-
+.info-nav ul li a{
+    color:white !important;
+}
 .navbar{
     backdrop-filter: blur(0px);
     border-bottom: 1px solid white;
