@@ -122,6 +122,16 @@ form input{
             font-size: 18px;
             color: rgb(204, 192, 233);
         }
+.contact-social-icon ul{
+            display: flex;
+            width: 100%;
+        }
+        .contact-social-icon ul li i{
+            font-size: 26px !important;
+            color: orangered;
+            padding: 20px;
+            margin-right: 10px;
+        }
 @media (max-width:768px) {
     .why-chose-container{
         height: 70vh;
