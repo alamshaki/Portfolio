@@ -59,34 +59,34 @@
     border-bottom: 1px solid white;
 }
 .contact-form{
-            display: flex;
-            width: 100%;
-            padding: 20px 58px;
-        }
-        .contact-form-content{
-            width: 50%;
-            background-color: #fc0303;
-            color: white;
-            padding: 20px;
-            border-radius: 10px 0px 0px 10px;
-
-        }
-        .contact-form-content h2{
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-        .form{
-            width: 50%;
-            padding: 20px;
-            background-color: rgba(145, 141, 141, 0.169);
-            border-radius: 0px 10px 10px 0px;
-        }
-        form{
-            width: 100%;
-            margin-top: 20px;
-        }
-        form input{
-            width: 100%;
+        display: flex;
+        width: 100%;
+        padding: 20px 58px;
+        margin-top: 30px;
+}
+.contact-form-content{
+        width: 50%;
+        background-color: #fc0303;
+        color: white;
+        padding: 20px;
+        border-radius: 10px 0px 0px 10px;
+}
+.contact-form-content h2{
+        font-size: 30px;
+        margin-bottom: 10px;
+}
+.form{
+        width: 50%;
+        padding: 20px;
+        background-color: rgba(155, 141, 141, 0.17);;
+        border-radius: 0px 10px 10px 0px;
+}
+form{
+        width: 100%;
+    margin-top: 20px;
+}
+form input{
+     width: 100%;
         }
         form label span{
             color: orangered;
@@ -104,6 +104,23 @@
         form button{
             width: auto;
             padding: 15px 25px;
+        }
+.contact-form-content ul{
+            margin-top: 20px;
+        }
+        .contact-form-content ul li i{
+            color: white;
+            background-color: rgb(40, 2, 87);
+            padding: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .contact-form-content ul li{
+            margin-top: 10px;
+        }
+        .contact-form-content ul li a{
+            font-size: 18px;
+            color: rgb(204, 192, 233);
         }
 @media (max-width:768px) {
     .why-chose-container{
