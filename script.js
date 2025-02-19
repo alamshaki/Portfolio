@@ -241,4 +241,10 @@ window.addEventListener("load", ()=>{
   }, 50);
 })
 
-
+document.querySelectorAll('.faq-title').forEach(item => {
+  item.addEventListener('click', function () {
+      let parent = this.parentElement;
+      document.querySelectorAll('.faq-item').forEach(faq => faq.classList.remove('active'));
+      parent.classList.add('active');
+  });
+});
