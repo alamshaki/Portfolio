@@ -1041,6 +1041,42 @@ footer ul li i{
     margin-right: 5px;
     margin-top: 2px;
 }
+.faq-container {
+    width: 40%;
+    margin: auto;
+    overflow: hidden;
+}
+.faq-item {
+    margin: 10px 0px;
+}
+.faq-title {
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #fc0303;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    transition: background 0.3s;
+}
+.faq-title:hover {
+    background: deeppink;
+}
+.faq-content {
+    padding: 10px 20px;
+    color: wheat;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+.faq-item.active .faq-content {
+    display: block;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 @media (max-width: 768px) {
     .navbar {
         padding: 8px 20px;
@@ -1241,6 +1277,11 @@ footer ul li i{
     .why-chose h3{
         left:17px;
     }
+    .faq-container {
+    width: 96%;
+    margin: 20px;
+    overflow: hidden;
+   }
 }
 @media (max-width: 440px) {
     .rating{
