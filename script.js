@@ -1,31 +1,3 @@
-
-const CloseMobileMenuByBody = () => {
-  let MobileMenu = document.querySelector(".mobile-navbar");
-  let MenuToggle = document.querySelector(".openmenu-icon");
-  let CloseButton = document.querySelector(".close-menu-icon");
-  MenuToggle.addEventListener("click", (event) => {
-    event.stopPropagation();
-    MobileMenu.style.display = "flex";
-  });
-  CloseButton.addEventListener("click", (event) => {
-    event.stopPropagation();
-    MobileMenu.style.display = "none";
-  });
-  document.body.addEventListener("click", (event) => {
-    if (MobileMenu.style.display === "flex" && !MobileMenu.contains(event.target) && !MenuToggle.contains(event.target)) {
-      MobileMenu.style.display = "none";
-    }
-  });
-};
-document.addEventListener("DOMContentLoaded", CloseMobileMenuByBody);
-
-let MobileNavItem = document.querySelectorAll("#mob-nav-item");
-MobileNavItem.forEach((MobNavItem) =>{
-  MobNavItem.addEventListener("click", () =>{
-    CloseMobileMenu();
-  })
-})
-
 const ChangeBackground = () =>{
     let body = document.querySelector("body");
     let anchor = document.querySelectorAll('a');
@@ -71,29 +43,6 @@ const ChangeBackground = () =>{
 
     }
 }
-
-window.addEventListener("scroll", () => {
-    const section = document.querySelector(".navbar");
-    const menu = document.querySelector(".mobile-navbar");
-  
-    // Get the bounding box of the section
-    const sectionTop = section.getBoundingClientRect().top;
-  
-    // Check if section is at the top (0 offset)
-    if (sectionTop == 0) {
-      menu.style.top = "65px"; // Set menu top to 21%
-      section.style.backgroundColor="#80b4ff96";
-      section.style.backdropFilter = "blur(10px)"
-      
-      
-    } else {
-      menu.style.top = "113px"; // Reset menu top when not at the top
-      section.style.backgroundColor="#ffffff00";
-      section.style.backdropFilter = "blur(0px)"
-     
-    }
-});
-
 
   window.addEventListener("scroll", () => {
     const menu = document.querySelector(".skills");
@@ -163,7 +112,7 @@ window.addEventListener("scroll", () => {
 
   let resume = document.querySelector("#cv");
 
-  resume.addEventListener('click', () =>{
+  resume?.addEventListener('click', () =>{
     let v = document.createElement("a");
     v.href = "Shakib Resume.pdf";
     v.download = "Shakib Resume.pdf";
@@ -229,17 +178,6 @@ window.addEventListener("scroll", () => {
       console.error("Auto-reply Error:", error);
     });
 }
-
-window.addEventListener("load", ()=>{
-  setTimeout(() => {
-    const preloader = document.querySelector(".pre-loader");
-    preloader.style.display = "none";
-    let footer = document.querySelector("footer");
-    footer.style.display = "flex";
-    let navbar = document.querySelector(".navbar");
-    navbar.style.display = "flex";
-  }, 50);
-})
 
 document.querySelectorAll('.faq-title').forEach(item => {
   item.addEventListener('click', function () {
