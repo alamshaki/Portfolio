@@ -1,10 +1,10 @@
-/* Header — styled to match main-logo (cyan + navy on dark) */
+/* Header — glassmorphism design */
 .site-header {
-  --header-bg: rgba(6, 10, 18, 0.94);
-  --header-bg-scrolled: rgba(4, 8, 16, 0.98);
+  --header-bg: rgba(255, 255, 255, 0.1);
+  --header-bg-scrolled: rgba(255, 255, 255, 0.15);
   --header-accent: #2ec4e6;
   --header-accent-soft: rgba(46, 196, 230, 0.14);
-  --header-border: rgba(46, 196, 230, 0.12);
+  --header-border: rgba(255, 255, 255, 0.2);
   --header-text: rgba(255, 255, 255, 0.88);
   --header-text-muted: rgba(255, 255, 255, 0.62);
   --header-max: 1320px;
@@ -14,21 +14,46 @@
   z-index: 9999;
   width: 100%;
   background: var(--header-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--header-border);
   transition: box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.site-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  pointer-events: none;
 }
 
 .site-header.is-scrolled {
   background: var(--header-bg-scrolled);
-  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.4);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
 }
 
 .site-header .header-inner {
   max-width: var(--header-max);
   margin: 0 auto;
   padding: 0 clamp(0.75rem, 3vw, 1.5rem);
+  position: relative;
+  z-index: 1;
 }
 
 .site-header .navbar {
@@ -45,7 +70,7 @@
   position: relative;
 }
 
-/* Logo — wide wordmark */
+/* Logo — no background */
 .site-header .logo {
   display: flex;
   align-items: center;
@@ -54,9 +79,9 @@
   max-width: min(280px, 42vw);
   padding: 0.35rem 0.65rem;
   text-decoration: none;
-  background: #ffffff;
+  background: transparent;
   border-radius: 8px;
-  border: 1px solid var(--header-border);
+  border: none;
 }
 
 .site-header .logo-img {
@@ -111,7 +136,7 @@
 
 .site-header .nav-menu a:hover {
   color: var(--header-text);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .site-header .nav-menu a.active {
@@ -164,7 +189,7 @@
   padding: 0;
   border: none;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--header-text);
   font-size: 0.9rem;
   cursor: pointer;
@@ -174,6 +199,11 @@
 .site-header .header-icon-btn:hover {
   background: var(--header-accent-soft);
   color: var(--header-accent);
+}
+
+/* Hide dark mode toggle */
+.site-header .theme-toggle {
+  display: none !important;
 }
 
 .site-header .nav-cta {
@@ -203,7 +233,7 @@
   padding: 0;
   border: 1px solid var(--header-border);
   border-radius: 8px;
-  background: var(--header-accent-soft);
+  background: rgba(255, 255, 255, 0.1);
   color: var(--header-accent);
   font-size: 1.1rem;
   cursor: pointer;
@@ -232,7 +262,9 @@
   width: min(320px, 100%);
   height: 100dvh;
   padding: 1rem 1.25rem 1.25rem;
-  background: #060a12;
+  background: rgba(6, 10, 18, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-left: 1px solid var(--header-border);
   z-index: 10000;
   display: flex !important;
@@ -259,8 +291,8 @@
 .site-header .mobile-nav-head .logo {
   max-width: calc(100% - 48px);
   padding: 0.25rem 0.5rem;
-  background: #ffffff;
-  border: 1px solid var(--header-border);
+  background: transparent;
+  border: none;
 }
 
 .site-header .close-menu-icon {
