@@ -54,7 +54,7 @@
   max-width: min(280px, 42vw);
   padding: 0.35rem 0.65rem;
   text-decoration: none;
-  background: #000;
+  background: #ffffff;
   border-radius: 8px;
   border: 1px solid var(--header-border);
 }
@@ -259,7 +259,7 @@
 .site-header .mobile-nav-head .logo {
   max-width: calc(100% - 48px);
   padding: 0.25rem 0.5rem;
-  background: #000;
+  background: #ffffff;
   border: 1px solid var(--header-border);
 }
 
