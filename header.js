@@ -116,9 +116,6 @@
                 <i class="fa-solid fa-phone"></i>
               </a>
               <div class="header-social" aria-label="Social links">${socialHtml}</div>
-              <button type="button" class="header-icon-btn theme-toggle" aria-label="Toggle light and dark theme">
-                <i class="fa-solid fa-moon"></i>
-              </button>
               <a href="contact.html" class="nav-cta">Hire Me</a>
               <button type="button" class="openmenu-icon" aria-label="Open navigation menu" aria-expanded="false">
                 <i class="fa-solid fa-bars"></i>
@@ -199,12 +196,6 @@
     });
   }
 
-  function initThemeToggle() {
-    document.querySelector(".theme-toggle")?.addEventListener("click", () => {
-      if (typeof ChangeBackground === "function") ChangeBackground();
-    });
-  }
-
   function initScrollEffects() {
     const header = document.querySelector(".site-header");
     if (!header) return;
@@ -230,7 +221,6 @@
     if (!mount) return;
     mount.outerHTML = renderHeader() + renderWhatsAppWidget();
     initMobileMenu();
-    initThemeToggle();
     initScrollEffects();
   }
 
