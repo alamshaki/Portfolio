@@ -443,13 +443,13 @@ li{
     transform: translateX(-50%);
     width: 170px;
     height: 3px;
-    background: linear-gradient(90deg, #2ec4e6 0%, #84ffc9 50%, #a686ff 100%);
+    background: linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
     border-radius: 2px;
 }
 .about{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: top;
     width: 100%;
     padding: 20px 58px;
     gap: 50px;
@@ -529,7 +529,9 @@ li{
     color: #ffffff;
     font-size: 1rem;
     line-height: 1.8;
-    margin-bottom: 15px;
+    padding-bottom: 25px
+
+    
 }
 
 .about-description {
@@ -547,7 +549,7 @@ li{
     width: 14px;
     height: 14px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #2ec4e6 0%, #84ffc9 100%);
+    background: linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
     animation: circlePulse 0.8s ease-out forwards;
     box-shadow: 0 0 10px rgba(46, 196, 230, 0.5);
 }
@@ -586,6 +588,12 @@ li{
         opacity: 1;
         transform: translateX(0);
         border-left-color: #2ec4e6;
+        border-image: linear-gradient(
+        90deg,
+        rgb(139, 104, 255) 0%,
+        hsla(234, 100%, 83%, 1) 50%,
+        hsla(288, 100%, 81%, 1) 100%
+    ) 1;
     }
 }
 
