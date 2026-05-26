@@ -44,7 +44,144 @@ const ChangeBackground = () =>{
     }
 }
 
-  window.addEventListener("scroll", () => {
+/* ========== Skills Slider Functionality ========== */
+class SkillsSlider {
+    constructor() {
+        this.slider = document.getElementById('skillsSlider');
+        this.prevBtn = document.getElementById('prevBtn');
+        this.nextBtn = document.getElementById('nextBtn');
+        this.indicatorsContainer = document.getElementById('sliderIndicators');
+        
+        if (!this.slider) return; // Exit if slider doesn't exist
+        
+        this.currentIndex = 0;
+        this.cardWidth = 0;
+        this.gap = 30;
+        this.cardsPerView = 4;
+        
+        this.init();
+    }
+    
+    init() {
+        this.calculateDimensions();
+        this.createIndicators();
+        this.attachEventListeners();
+        this.triggerProgressAnimations();
+        window.addEventListener('resize', () => this.calculateDimensions());
+    }
+    
+    calculateDimensions() {
+        const cards = this.slider.querySelectorAll('.skill-card');
+        if (cards.length === 0) return;
+        
+        const sliderWrapper = this.slider.parentElement;
+        const wrapperWidth = sliderWrapper.offsetWidth;
+        
+        // Calculate responsive cards per view
+        if (window.innerWidth < 768) {
+            this.cardsPerView = 1;
+        } else if (window.innerWidth < 1024) {
+            this.cardsPerView = 2;
+        } else if (window.innerWidth < 1400) {
+            this.cardsPerView = 3;
+        } else {
+            this.cardsPerView = 4;
+        }
+        
+        this.cardWidth = (wrapperWidth - (this.gap * (this.cardsPerView - 1))) / this.cardsPerView;
+        this.maxIndex = Math.max(0, cards.length - this.cardsPerView);
+    }
+    
+    createIndicators() {
+        if (!this.indicatorsContainer) return;
+        
+        const cards = this.slider.querySelectorAll('.skill-card');
+        const indicatorCount = Math.ceil(cards.length / this.cardsPerView);
+        
+        this.indicatorsContainer.innerHTML = '';
+        
+        for (let i = 0; i < indicatorCount; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'indicator-dot' + (i === 0 ? ' active' : '');
+            dot.addEventListener('click', () => this.goToSlide(i * this.cardsPerView));
+            this.indicatorsContainer.appendChild(dot);
+        }
+    }
+    
+    attachEventListeners() {
+        if (this.prevBtn) {
+            this.prevBtn.addEventListener('click', () => this.prev());
+        }
+        if (this.nextBtn) {
+            this.nextBtn.addEventListener('click', () => this.next());
+        }
+    }
+    
+    triggerProgressAnimations() {
+        const cards = this.slider.querySelectorAll('.skill-card');
+        cards.forEach((card, index) => {
+            const circles = card.querySelectorAll('.skill-circle-progress');
+            circles.forEach(circle => {
+                // Trigger animation by setting a small delay
+                setTimeout(() => {
+                    circle.style.animation = 'none';
+                    setTimeout(() => {
+                        circle.style.animation = '';
+                    }, 10);
+                }, index * 100);
+            });
+        });
+    }
+    
+    updateSlider() {
+        const offset = -this.currentIndex * (this.cardWidth + this.gap);
+        this.slider.style.transform = `translateX(${offset}px)`;
+        this.updateIndicators();
+    }
+    
+    updateIndicators() {
+        if (!this.indicatorsContainer) return;
+        
+        const dots = this.indicatorsContainer.querySelectorAll('.indicator-dot');
+        const activeIndex = Math.floor(this.currentIndex / this.cardsPerView);
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeIndex);
+        });
+    }
+    
+    prev() {
+        if (this.currentIndex > 0) {
+            this.currentIndex--;
+            this.updateSlider();
+        }
+    }
+    
+    next() {
+        if (this.currentIndex < this.maxIndex) {
+            this.currentIndex++;
+            this.updateSlider();
+        }
+    }
+    
+    goToSlide(index) {
+        this.currentIndex = Math.min(index, this.maxIndex);
+        this.updateSlider();
+        this.triggerProgressAnimations();
+    }
+}
+
+// Initialize slider when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    new SkillsSlider();
+});
+
+// Also initialize on page load for compatibility
+window.addEventListener('load', () => {
+    new SkillsSlider();
+});
+
+
     const menu = document.querySelector(".skills");
     let about = document.querySelector(".about-us");
     let css = document.querySelector(".css")
