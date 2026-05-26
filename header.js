@@ -134,7 +134,7 @@
           </div>
           <ul class="mobile-nav-list">${mobileNav}</ul>
           <div class="mobile-nav-footer">
-            <a href="tel:${SITE.phone}" class="mobile-contact-link"><i class="fa-solid fa-phone"></i> ${SITE.phone}</a>
+            <a href="tel:${SITE.phone}" class="mobile-nav-cta">Call Us</a>
             <a href="contact.html" class="mobile-nav-cta">Hire Me</a>
           </div>
         </aside>

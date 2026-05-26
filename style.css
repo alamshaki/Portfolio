@@ -87,9 +87,7 @@ li{
 .nav-menu ul li{
     padding: 0px 15px;   
 }
-.active{
-    color: orangered !important;
-}
+
 .nav-menu ul li a{
    font-size: 17px;
    color: white;
@@ -143,8 +141,7 @@ li{
 }
 .close-menu-icon{
      position: absolute;
-     top: 8px;
-     left: 20px;
+     right: 20px;
      border: 1px solid wheat;
      border-radius: 4px;
      display: flex;
@@ -242,6 +239,55 @@ li{
   font-size: 1.8rem;
   margin-bottom: 25px;
   font-weight: 600;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.circle-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.circle-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-1 {
+  background-color: #2ec4e6;
+  animation: bounce-1 1.5s ease-in-out infinite;
+}
+
+.dot-2 {
+  background-color: #84ffc9;
+  animation: bounce-2 1.5s ease-in-out infinite 0.2s;
+}
+
+.dot-3 {
+  background-color: #a686ff;
+  animation: bounce-3 1.5s ease-in-out infinite 0.4s;
+}
+
+@keyframes bounce-1 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes bounce-2 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@keyframes bounce-3 {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
 }
 
 .form-group {
@@ -371,41 +417,34 @@ li{
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: #ffffff;
+    border: none;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 #about-heading{
     text-align: center;
     font-size: 35px;
-    font-weight: 200;
-    margin-left: -80px;
-    margin-bottom: -90px;
+    font-weight: 600;
+    margin-left: 0;
+    margin-bottom: 40px;
     position: relative;
+    color: #ffffff;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
 }
-#about-heading::before{
-    content: "";    
-    width: 30px;
-    height: 30px;
-    background-color: orangered;
-    border-radius: 50%;
+
+#about-heading::after {
+    content: '';
     position: absolute;
-    top: 10%;
-    right: 5%;
-}
-#about-heading::after{
-    content: "";    
-    width: 20px;
-    height: 20px;
-    background-color: orange;
-    border-radius: 50%;
-    position: absolute;
-    top: 75%;
-    right: 2%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 170px;
+    height: 3px;
+    background: linear-gradient(90deg, #2ec4e6 0%, #84ffc9 50%, #a686ff 100%);
+    border-radius: 2px;
 }
 .about{
     display: flex;
@@ -413,16 +452,53 @@ li{
     align-items: center;
     width: 100%;
     padding: 20px 58px;
+    gap: 50px;
 }
 .about-img{
     width: 50%;
     display: flex;
     justify-content: end;
 }
+
+.about-image-container {
+    background-image: url(about-page.jpg);
+    background-position: center;
+    background-size: cover;
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 450px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(46, 196, 230, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(Shkib\ image-Photoroom_prev_ui.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+
+.about-image-container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(46, 196, 230, 0.3);
+}
+
 .about-img img{
     width: 100%;
     object-fit: cover;
-    /* animation: faderight 2s ease-in-out forwards; */
 }
 @keyframes fadeleft {
     0% {
@@ -446,22 +522,85 @@ li{
 }
 .about-content{
     width: 50%;
+    color: #ffffff;
 }
-.about-content p{
-    margin-bottom: 8px;
+
+.about-content p {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
 }
-#about-content-heading{
-    margin-bottom: 12px;
+
+.about-description {
+    padding-left: 30px;
+    border-left: 3px solid transparent;
     position: relative;
+    animation: slideInDescription 0.8s ease-out forwards;
 }
-#about-content-heading::before{
-    content: "";
-    width: 35px;
-    height: 2px;
-    background-color: orangered;
+
+.about-description::before {
+    content: '';
     position: absolute;
-    bottom: 0;
-    left: 0;
+    left: -8px;
+    top: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2ec4e6 0%, #84ffc9 100%);
+    animation: circlePulse 0.8s ease-out forwards;
+    box-shadow: 0 0 10px rgba(46, 196, 230, 0.5);
+}
+
+.about-description:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.about-description:nth-child(1)::before {
+    animation-delay: 0s;
+}
+
+.about-description:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.about-description:nth-child(2)::before {
+    animation-delay: 0.2s;
+}
+
+.about-description:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.about-description:nth-child(3)::before {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideInDescription {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+        border-left-color: transparent;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        border-left-color: #2ec4e6;
+    }
+}
+
+@keyframes circlePulse {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 .skills-about {
     width: 95%;
@@ -1223,7 +1362,7 @@ footer ul li i{
     }
     .main{
         flex-direction: column;
-        padding: 25px 15px;
+        padding: 15px 15px;
         gap: 25px;
     }
     .main-content{
@@ -1234,11 +1373,19 @@ footer ul li i{
     }
     .main-form {
       width: 100%;
-      padding: 25px;
+      padding: 15px;
     }
     .main-form h3 {
       font-size: 1.5rem;
       margin-bottom: 20px;
+      text-align: center;
+      flex-direction: column;
+    }
+    
+    .circle-dots {
+      justify-content: center;
+      margin-top: 12px;
+      display: flex;
     }
     .form-group {
       margin-bottom: 15px;
@@ -1266,7 +1413,7 @@ footer ul li i{
         justify-self: center;
     }
     .skills-about{
-        padding: 20px;
+        padding: 15px;
     }
     .skills{
         flex-direction: column;
@@ -1316,24 +1463,29 @@ footer ul li i{
         margin:0px;
     }
     .about{
-        padding: 20px;
+        padding: 15px;
         flex-direction: column-reverse;
+        gap: 20px;
     }
     .about-content{
         width: 100%;
+        color: #ffffff;
     }
     .about-img{
         width: 100%;
+    }
+    .about-image-container {
+        height: 300px;
     }
     .skills {
         margin-top: -40px;
     }
     .experince{
-        padding: 20px;
+        padding: 15px;
         flex-direction: column;
     }
     .experince1{
-        padding: 20px;
+        padding: 15px;
         flex-direction: column-reverse;
     }
     .experince1-img{
@@ -1358,7 +1510,7 @@ footer ul li i{
     }
     .projects{
         flex-direction: column;
-        padding: 0px 20px;
+        padding: 0px 15px;
     }
     .project-swiper{
         margin-left: 0px;
@@ -1372,7 +1524,7 @@ footer ul li i{
     }
     .testimoniol{
         flex-direction: column;
-        padding:0px 20px;
+        padding:0px 15px;
     }
     .testimoniol-para{
         width: 96%;
@@ -1402,7 +1554,7 @@ footer ul li i{
         border-radius: 8px;
     }
     footer{
-        padding: 20px;
+        padding: 15px;
     }
     form{
         width: 100%;
@@ -1422,7 +1574,7 @@ footer ul li i{
     }
     .why-chose{
         flex-direction: column;
-        padding: 20px;
+        padding: 15px;
     }
     .why-chose div{
         width: 100%;
@@ -1572,7 +1724,7 @@ footer ul li i{
   .why-chose,
   .projects {
     margin: 20px 10px;
-    padding: 25px;
+    padding: 15px;
   }
 }
     .rating{
