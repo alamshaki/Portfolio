@@ -10,7 +10,7 @@
     logoAlt:
       "Shakib Alam Technology & Innovation logo — SA circuit hexagon mark with Shakib Alam wordmark",
     phone: "9117492652",
-    email: "digitalcreating8@gmail.com",
+    email: "alamshakib332@gmail.com",
     social: [
       {
         href: "https://www.linkedin.com/in/shakib-alam-6114a2253/",
@@ -23,7 +23,7 @@
         label: "GitHub",
       },
       {
-        href: "mailto:digitalcreating8@gmail.com",
+        href: "mailto:alamshakib332@gmail.com",
         icon: "fa-solid fa-envelope",
         label: "Email",
       },

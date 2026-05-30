@@ -58,16 +58,26 @@ class SkillsSlider {
         this.cardWidth = 0;
         this.gap = 30;
         this.cardsPerView = 4;
+        this.maxIndex = 0;
+        this.autoSlideInterval = null;
         
         this.init();
     }
     
     init() {
-        this.calculateDimensions();
-        this.createIndicators();
-        this.attachEventListeners();
-        this.triggerProgressAnimations();
-        window.addEventListener('resize', () => this.calculateDimensions());
+        setTimeout(() => {
+            this.calculateDimensions();
+            this.createIndicators();
+            this.attachEventListeners();
+            this.updateSlider();
+            this.triggerProgressAnimations();
+        }, 100);
+        
+        window.addEventListener('resize', () => {
+            this.calculateDimensions();
+            this.createIndicators();
+            this.updateSlider();
+        });
     }
     
     calculateDimensions() {
@@ -171,79 +181,59 @@ class SkillsSlider {
     }
 }
 
-// Initialize slider when DOM is ready
+// Initialize slider and bind DOM-dependent behavior when ready
 document.addEventListener('DOMContentLoaded', () => {
     new SkillsSlider();
-});
 
-// Also initialize on page load for compatibility
-window.addEventListener('load', () => {
-    new SkillsSlider();
-});
+    // Safe DOM queries and scroll-triggered animations
+    const menu = document.querySelector('.skills');
+    const about = document.querySelector('.about-us');
+    const css = document.querySelector('.css');
+    const html = document.querySelector('.html');
+    const php = document.querySelector('.php');
+    const javascript = document.querySelector('.javascript');
+    const cpp = document.querySelector('.cpp');
+    const mysql = document.querySelector('.mysql');
+    const mongodb = document.querySelector('.mongodb');
+    const git = document.querySelector('.git');
+    const bootstrap = document.querySelector('.bootstrap');
+    const wordpress = document.querySelector('.wordpress');
+    const AboutImage = document.querySelector('.about-image');
 
+    function handleScrollAnimations() {
+        if (menu && css && html) {
+            const menuTop = menu.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
 
-    const menu = document.querySelector(".skills");
-    let about = document.querySelector(".about-us");
-    let css = document.querySelector(".css")
-    let html = document.querySelector(".html")
-    let php = document.querySelector(".php")
-    let javascript = document.querySelector(".javascript")
-    let cpp = document.querySelector(".cpp")
-    let mysql = document.querySelector(".mysql")
-    let mongodb = document.querySelector(".mongodb")
-    let git = document.querySelector(".git")
-    let bootstrap = document.querySelector(".bootstrap")
-    let wordpress = document.querySelector(".wordpress")
-    let AboutImage = document.querySelector(".about-image");
+            if ((menuTop >= viewportHeight * 0.5 - menu.offsetHeight / 2 && menuTop <= viewportHeight * 0.5 + menu.offsetHeight / 2 && window.innerWidth >= 768) ||
+                (menuTop >= viewportHeight * 0.1 - menu.offsetHeight / 2 && menuTop <= viewportHeight * 0.1 + menu.offsetHeight / 2)) {
+                css.style.animation = 'css .5s ease-in-out forwards';
+                html.style.animation = 'html .5s ease-in-out forwards';
+                if (javascript) javascript.style.animation = 'javascript .5s ease-in-out forwards';
+                if (php) php.style.animation = 'php .5s ease-in-out forwards';
+                if (cpp) cpp.style.animation = 'cpp .5s ease-in-out forwards';
+                if (mysql) mysql.style.animation = 'mysql .5s ease-in-out forwards';
+                if (mongodb) mongodb.style.animation = 'mongodb .5s ease-in-out forwards';
+                if (git) git.style.animation = 'git .5s ease-in-out forwards';
+                if (bootstrap) bootstrap.style.animation = 'bootstrap .5s ease-in-out forwards';
+                if (wordpress) wordpress.style.animation = 'wordpress .5s ease-in-out forwards';
+            }
+        }
 
-    // Get the bounding rectangle of the menu
-    const menuTop = menu.getBoundingClientRect().top;
-    let aboutTop = about.getBoundingClientRect().top;
-    const viewportHeight = window.innerHeight;
-    
-  
-    // Check if menu is at 50% of the viewport height
-    if (menuTop >= viewportHeight * 0.5 - menu.offsetHeight / 2 && 
-        menuTop <= viewportHeight * 0.5 + menu.offsetHeight / 2 && window.innerWidth >= 768) {
-        css.style.animation = "css .5s ease-in-out forwards";
-        html.style.animation = "html .5s ease-in-out forwards";
-        javascript.style.animation = "javascript .5s ease-in-out forwards"
-        php.style.animation = "php .5s ease-in-out forwards"
-        cpp.style.animation = "cpp .5s ease-in-out forwards"
-        mysql.style.animation = "mysql .5s ease-in-out forwards"
-        mongodb.style.animation = "mongodb .5s ease-in-out forwards"
-        git.style.animation = "git .5s ease-in-out forwards"
-        bootstrap.style.animation = "bootstrap .5s ease-in-out forwards"
-        wordpress.style.animation = "wordpress .5s ease-in-out forwards"
-        
+        if (about && AboutImage) {
+            const aboutTop = about.getBoundingClientRect().top;
+            const viewportHeight = window.innerHeight;
+            if ((aboutTop >= viewportHeight * (-0.5) - about.offsetHeight / 2 && aboutTop <= viewportHeight * (-0.5) + about.offsetHeight / 2 && innerWidth >= 768) ||
+                (aboutTop >= viewportHeight * (-1.4) - about.offsetHeight / 2 && aboutTop <= viewportHeight * (-1.4) + about.offsetHeight / 2)) {
+                AboutImage.style.animation = 'fadeleft 1s linear forwards';
+            }
+        }
     }
-    else if(menuTop >= viewportHeight * 0.1 - menu.offsetHeight / 2 && 
-      menuTop <= viewportHeight * 0.1 + menu.offsetHeight / 2){
-        css.style.animation = "css .5s ease-in-out forwards";
-        html.style.animation = "html .5s ease-in-out forwards";
-        javascript.style.animation = "javascript .5s ease-in-out forwards"
-        php.style.animation = "php .5s ease-in-out forwards"
-        cpp.style.animation = "cpp .5s ease-in-out forwards"
-        mysql.style.animation = "mysql .5s ease-in-out forwards"
-        mongodb.style.animation = "mongodb .5s ease-in-out forwards"
-        bootstrap.style.animation = "bootstrap .5s ease-in-out forwards"
-        wordpress.style.animation = "wordpress .5s ease-in-out forwards"
 
-      }
-
-      else if(aboutTop >= viewportHeight * (-0.5) - about.offsetHeight / 2 && 
-        aboutTop <= viewportHeight * (-0.5) + about.offsetHeight / 2 && innerWidth >= 768){
-         AboutImage.style.animation = "fadeleft 1s linear forwards"
-        }
-      else if(aboutTop >= viewportHeight * (-1.4) - about.offsetHeight / 2 && 
-        aboutTop <= viewportHeight * (-1.4) + about.offsetHeight / 2){
-         AboutImage.style.animation = "fadeleft 1s linear forwards"
-        }
-    
-     else {
-     
-      }
-  });
+    // Run once and on scroll
+    handleScrollAnimations();
+    window.addEventListener('scroll', handleScrollAnimations);
+});
 
  
 
@@ -257,30 +247,15 @@ window.addEventListener('load', () => {
   })
   
   window.addEventListener("scroll", ()=>{
-    let exp = document.querySelector(".experince");
-    let expImg = document.querySelector(".experience-image")
-  
+    let exp = document.querySelector(".experience-card");
+    let expImg = document.querySelector(".experience-card-image img")
+
+    if (!exp || !expImg) return;
     let expTop = exp.getBoundingClientRect().top;
-  
+
     if(expTop <= 180){
-    expImg.style.animation = "faderight 1s linear forwards"
+      expImg.style.animation = "faderight 1s linear forwards"
     }
-   else{
-  
-    }
-  })
-  window.addEventListener("scroll", ()=>{
-    let exp = document.querySelector(".experince1");
-    let expImg = document.querySelector(".experience-image1")
-  
-    let expTop = exp.getBoundingClientRect().top;
-  
-    if(expTop <= 180){
-    expImg.style.animation = "fadeleft 1s linear forwards"
-    }
-   else{
-  
-    }
   })
 
 
@@ -291,30 +266,80 @@ window.addEventListener('load', () => {
       number: document.getElementById("number").value,
       message: document.getElementById("message").value
     };
+        // ensure the email goes to your address; template should accept `to_email` or `to_name`
+        params.to_email = "alamshakib332@gmail.com";
+        params.to_name = "Shakib";
 
-    emailjs.send("service_pu7lza9", "template_4sw0yiq", params)
-      .then(function(response) {
-      alert("Success! Your email was sent successfully.");
-    })
-    .catch(function(error) {
-      alert("Failed to send email. Please try again later.");
-      console.error("Error:", error);
-    });
-  
-  
-  var autoReplyParams = {
-    from_name: document.getElementById("name").value,
-    email: document.getElementById("email").value
-  };
-
-  emailjs.send("YOUR_SERVICE_ID", "auto_reply_template", autoReplyParams)
-    .then(function(response) {
-      console.log("Auto-reply sent!", response.status, response.text);
-    })
-    .catch(function(error) {
-      console.error("Auto-reply Error:", error);
-    });
+        emailjs.send("service_pu7lza9", "template_4sw0yiq", params)
+            .then(function(response) {
+                alert("Success! Your email was sent successfully.");
+            })
+            .catch(function(error) {
+                alert("Failed to send email. Please try again later.");
+                console.error("Error:", error);
+            });
 }
+
+function showThankYouModal() {
+  const modal = document.getElementById('thankYouModal');
+  if (!modal) return;
+  modal.classList.add('visible');
+  modal.setAttribute('aria-hidden', 'false');
+}
+
+function hideThankYouModal() {
+  const modal = document.getElementById('thankYouModal');
+  if (!modal) return;
+  modal.classList.remove('visible');
+  modal.setAttribute('aria-hidden', 'true');
+}
+
+function initHeroForm() {
+  const form = document.getElementById('hero-form');
+  const closeBtn = document.getElementById('thankYouCloseBtn');
+  const modal = document.getElementById('thankYouModal');
+
+  if (!form) return;
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const name = document.getElementById('hero-name').value.trim();
+    const email = document.getElementById('hero-email').value.trim();
+    const service = document.getElementById('hero-service').value;
+    const message = document.getElementById('hero-message').value.trim();
+
+    if (!name || !email || !service || !message) {
+      alert('Please complete all fields before submitting.');
+      return;
+    }
+
+    const params = {
+      from_name: name,
+      email_id: email,
+      service: service,
+      message: message,
+      to_email: 'alamashakib332@gmail.com',
+      to_name: 'Shakib'
+    };
+
+    emailjs.send('service_pu7lza9', 'template_4sw0yiq', params)
+      .then(function () {
+        form.reset();
+        showThankYouModal();
+      })
+      .catch(function (error) {
+        alert('Oops! Something went wrong. Please try again later.');
+        console.error('EmailJS Error:', error);
+      });
+  });
+
+  closeBtn?.addEventListener('click', hideThankYouModal);
+  modal?.addEventListener('click', function (event) {
+    if (event.target === modal) hideThankYouModal();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initHeroForm);
 
 document.querySelectorAll('.faq-title').forEach(item => {
   item.addEventListener('click', function () {

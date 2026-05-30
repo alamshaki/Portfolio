@@ -30,6 +30,16 @@
   </head>
 
   <body>
+    <!-- Global gradient for skill circle strokes -->
+    <svg width="0" height="0" style="position:absolute">
+      <defs>
+        <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+          <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+        </linearGradient>
+      </defs>
+    </svg>
     <div id="site-header"></div>
     <!-- Main content or Hero section -->
     <div class="main">
@@ -60,7 +70,7 @@
 
         <div class="main-btn" style="margin-top: 25px;">
           <div class="hire-btn">
-            <a href="mailto:digitalcreating8@gmail.com">Get Started</a>
+            <a href="mailto:alamshakib332@gmail.com">Get Started</a>
           </div>
           <div class="download">
             <a href="" id="cv">Download CV <i class="fa-solid fa-download"></i></a>
@@ -78,29 +88,44 @@
         </h3>
         <form id="hero-form">
           <div class="form-group">
-            <input type="text" placeholder="Your Name" required />
+            <input id="hero-name" type="text" placeholder="Your Name" required />
           </div>
           <div class="form-group">
-            <input type="email" placeholder="Your Email" required />
+            <input id="hero-email" type="email" placeholder="Your Email" required />
           </div>
           <div class="form-group">
-            <select required>
-              <option value="">Select Service</option>
-              <option value="web-design">Web Design</option>
-              <option value="web-development">Web Development</option>
-              <option value="wordpress">WordPress Development</option>
-              <option value="shopify">Shopify Development</option>
-              <option value="full-stack">Full-Stack Development</option>
-              <option value="frontend">Frontend Development</option>
-              <option value="backend">Backend Development</option>
-              <option value="maintenance">Website Maintenance</option>
-            </select>
+            <div class="select-wrapper">
+              <select id="hero-service" required>
+                <option value="">Select Service</option>
+                <option value="web-design">Web Design</option>
+                <option value="web-development">Web Development</option>
+                <option value="wordpress">WordPress Development</option>
+                <option value="shopify">Shopify Development</option>
+                <option value="full-stack">Full-Stack Development</option>
+                <option value="frontend">Frontend Development</option>
+                <option value="backend">Backend Development</option>
+                <option value="maintenance">Website Maintenance</option>
+              </select>
+              <span class="select-arrow"><i class="fas fa-chevron-down"></i></span>
+            </div>
           </div>
           <div class="form-group">
-            <textarea placeholder="Project Description" rows="4" required></textarea>
+            <textarea id="hero-message" placeholder="Project Description" rows="4" required></textarea>
           </div>
           <button type="submit" class="submit-btn">Send Inquiry</button>
         </form>
+      </div>
+    </div>
+
+    <div class="thank-you-modal" id="thankYouModal" aria-hidden="true">
+      <div class="thank-you-card">
+        <div class="thank-you-header">
+          <span class="thank-icon"><i class="fa-solid fa-circle-check"></i></span>
+          <h2>Thank You</h2>
+          <span class="thank-icon"><i class="fa-solid fa-heart"></i></span>
+        </div>
+        <p>Your message has been sent successfully. I will review your request and get back to you very soon.</p>
+        <button type="button" class="thank-you-close" id="thankYouCloseBtn">Continue</button>
       </div>
     </div>
 
@@ -147,6 +172,13 @@
             <div class="skill-card">
               <div class="skill-circle">
                 <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
                   <circle cx="60" cy="60" r="55" class="skill-circle-bg"></circle>
                   <circle cx="60" cy="60" r="55" class="skill-circle-progress" style="--percentage: 90;"></circle>
                 </svg>
@@ -159,6 +191,13 @@
             <div class="skill-card">
               <div class="skill-circle">
                 <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
                   <circle cx="60" cy="60" r="55" class="skill-circle-bg"></circle>
                   <circle cx="60" cy="60" r="55" class="skill-circle-progress" style="--percentage: 85;"></circle>
                 </svg>
@@ -171,6 +210,13 @@
             <div class="skill-card">
               <div class="skill-circle">
                 <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
                   <circle cx="60" cy="60" r="55" class="skill-circle-bg"></circle>
                   <circle cx="60" cy="60" r="55" class="skill-circle-progress" style="--percentage: 75;"></circle>
                 </svg>
@@ -183,6 +229,13 @@
             <div class="skill-card">
               <div class="skill-circle">
                 <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
                   <circle cx="60" cy="60" r="55" class="skill-circle-bg"></circle>
                   <circle cx="60" cy="60" r="55" class="skill-circle-progress" style="--percentage: 65;"></circle>
                 </svg>
@@ -196,6 +249,13 @@
             <div class="skill-card">
               <div class="skill-circle">
                 <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
                   <circle cx="60" cy="60" r="55" class="skill-circle-bg"></circle>
                   <circle cx="60" cy="60" r="55" class="skill-circle-progress" style="--percentage: 80;"></circle>
                 </svg>
@@ -208,6 +268,13 @@
             <div class="skill-card">
               <div class="skill-circle">
                 <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
                   <circle cx="60" cy="60" r="55" class="skill-circle-bg"></circle>
                   <circle cx="60" cy="60" r="55" class="skill-circle-progress" style="--percentage: 75;"></circle>
                 </svg>
@@ -221,6 +288,13 @@
             <div class="skill-card">
               <div class="skill-circle">
                 <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
                   <circle cx="60" cy="60" r="55" class="skill-circle-bg"></circle>
                   <circle cx="60" cy="60" r="55" class="skill-circle-progress" style="--percentage: 70;"></circle>
                 </svg>
@@ -233,6 +307,13 @@
             <div class="skill-card">
               <div class="skill-circle">
                 <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
                   <circle cx="60" cy="60" r="55" class="skill-circle-bg"></circle>
                   <circle cx="60" cy="60" r="55" class="skill-circle-progress" style="--percentage: 60;"></circle>
                 </svg>
@@ -245,6 +326,13 @@
             <div class="skill-card">
               <div class="skill-circle">
                 <svg viewBox="0 0 120 120">
+                  <defs>
+                    <linearGradient id="gradientStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" style="stop-color:#2ec4e6;stop-opacity:1" />
+                      <stop offset="50%" style="stop-color:#84ffc9;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#a686ff;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
                   <circle cx="60" cy="60" r="55" class="skill-circle-bg"></circle>
                   <circle cx="60" cy="60" r="55" class="skill-circle-progress" style="--percentage: 55;"></circle>
                 </svg>
@@ -265,55 +353,43 @@
     </div>
     <!-- this section will define the experience section -->
 
-    <h2 class="experince-heading" id="experience">Experience</h2>
-    <div class="experince">
-      <div class="experince-content">
-        <h3 class="experince-content-heading">
-          Experience with a Digital Creating Pvt Ltd
-        </h3>
-        <p style="margin-bottom: 12px">
-          For the past eight months, I have been collaborating with a digital
-          creating company, honing my expertise in crafting engaging web
-          solutions. My role involves designing user-friendly interfaces,
-          integrating advanced functionalities, and optimizing website
-          performance.
-        </p>
-        <p>
-          This hands-on experience has deepened my understanding of the digital
-          landscape, strengthened my problem-solving skills, and allowed me to
-          contribute to impactful projects. Working in a dynamic team
-          environment, I have successfully delivered creative solutions that
-          meet client expectations while adhering to industry best practices.
-        </p>
-      </div>
-      <div class="experince-img">
-        <img src="experience 1.png" alt="" class="experience-image" />
-      </div>
-    </div>
-    <div class="experince1">
-      <div class="experince1-img">
-        <img src="experince 2.png" alt="" class="experience-image1" />
-      </div>
-      <div class="experince-content1">
-        <h3 class="experince-content-heading">
-          Experience with a Lavanya Gurukul School Bhopal
-        </h3>
-        <p style="margin-bottom: 12px">
-          Completed a six-month internship as a Front-End Developer at Lavanya
-          Gurukul School, Bhopal. Proficient in HTML, CSS, JavaScript,
-          Bootstrap, and Tailwind CSS. Designed and developed responsive web
-          pages, enhancing user experience and interface design. Collaborated
-          with cross-functional teams to implement modern web design practices
-          and ensure compatibility across various browsers and devices.
-        </p>
-        <p>
-          This hands-on experience has deepened my understanding of the digital
-          landscape, strengthened my problem-solving skills, and allowed me to
-          contribute to impactful projects.
-        </p>
+    <div class="experience-section" id="experience">
+      <div class="experience-card">
+        <div class="experience-card-header">
+          <h2 class="experience-heading">Professional Experience</h2>
+          <p class="experience-intro">
+            A combined experience from agency and education technology roles, delivering polished web solutions with responsive design, modern UI, and strong performance.
+          </p>
+        </div>
+        <div class="experience-card-body">
+          <div class="experience-card-image">
+            <img src="experience 1.png" alt="Experience illustration" />
+          </div>
+          <div class="experience-card-info">
+            <div class="experience-highlights">
+              <div class="experience-timeline">
+                <div class="experience-event">
+                  <span class="experience-title">Digital Creating Pvt Ltd</span>
+                  <span class="experience-period">2 years</span>
+                  <p>Built clean, responsive web pages and interfaces that supported digital campaigns and client success, while improving performance and accessibility across projects.</p>
+                </div>
+                <div class="experience-event">
+                  <span class="experience-title">Lavanya Gurukul School</span>
+                  <span class="experience-period">6 months</span>
+                  <p>Developed education-focused front-end experiences using HTML, CSS, JavaScript, Bootstrap, and Tailwind.</p>
+                </div>
+                <div class="experience-event">
+                  <span class="experience-title">Internshala</span>
+                  <span class="experience-period">6 months</span>
+                  <p>Internship as a PHP Developer, building dynamic backend-driven pages, integrating databases, and delivering reliable application features.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <h2 class="experince-heading">Why Chose Us?</h2>
+    <h2 class="experience-heading">Why Chose Us?</h2>
     <div class="why-chose" id="why-chose">
       <div class="chose1">
         <h3><span>1</span>Expertise and Experience</h3>
@@ -553,7 +629,7 @@
         <input
           type="email"
           id="email"
-          placeholder="alamshakib378@gmail.com"
+          placeholder="alamshakib332@gmail.com"
           required
         />
         <input type="number" id="number" placeholder="9117492652" required />
@@ -608,7 +684,7 @@
           </li>
           <li>
             <i class="fa-regular fa-envelope"></i
-            ><a href="mailto:-alamshaki332@gmail.com" style="color: white"
+            ><a href="mailto:alamshakib332@gmail.com" style="color: white"
               >Email Id:- alamshakib332@gmail.com</a
             >
           </li>
