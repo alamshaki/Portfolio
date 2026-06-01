@@ -1927,16 +1927,21 @@ footer ul li i{
   border-radius: 20px;
   padding: 40px;
   box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
 }
 
 /* Why Choose Cards */
 .why-chose div {
+  width: 100%;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 15px;
-  padding: 25px;
+  padding: 30px 24px;
+  margin-bottom: 10px;
   transition: all 0.3s ease;
 }
 
@@ -1945,6 +1950,103 @@ footer ul li i{
   border-color: rgba(46, 196, 230, 0.5);
   box-shadow: 0 8px 32px rgba(46, 196, 230, 0.3);
   transform: translateY(-5px);
+}
+
+.why-hero {
+  width: 100%;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  padding: 30px 26px;
+  margin-bottom: 0;
+}
+
+.why-hero h2 {
+  margin: 0;
+  color: white;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 700;
+}
+
+.why-hero p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.why-card {
+  width: 100%;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.04) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 24px;
+  padding: 28px 24px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(46, 196, 230, 0.18);
+  border-color: rgba(46, 196, 230, 0.45);
+}
+
+.why-card h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: white;
+}
+
+.why-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.75;
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px !important;
+}
+
+.card-icon {
+  font-size: 22px;
+  color: transparent;
+  background: linear-gradient(90deg, hsla(154, 100%, 76%, 1) 0%, hsla(234, 100%, 83%, 1) 50%, hsla(288, 100%, 81%, 1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+@media (max-width: 1024px) {
+  .why-card {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-chose {
+    padding: 30px 20px;
+  }
+
+  .why-card {
+    width: 100%;
+  }
+
+  .why-chose-header h2 {
+    font-size: 2.2rem;
+  }
 }
 
 /* Projects Section */
