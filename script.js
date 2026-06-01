@@ -184,6 +184,7 @@ class SkillsSlider {
 // Initialize slider and bind DOM-dependent behavior when ready
 document.addEventListener('DOMContentLoaded', () => {
     new SkillsSlider();
+    initProjectDots();
 
     // Safe DOM queries and scroll-triggered animations
     const menu = document.querySelector('.skills');
@@ -233,7 +234,73 @@ document.addEventListener('DOMContentLoaded', () => {
     // Run once and on scroll
     handleScrollAnimations();
     window.addEventListener('scroll', handleScrollAnimations);
+
+    const projectSlider = document.getElementById('projectsSlider');
+    const prevProjectBtn = document.getElementById('projectPrevBtn');
+    const nextProjectBtn = document.getElementById('projectNextBtn');
+
+    function scrollProjectCards(direction) {
+        if (!projectSlider) return;
+        const card = projectSlider.querySelector('.projects-card');
+        if (!card) return;
+        const gap = 20;
+        const scrollAmount = card.offsetWidth + gap;
+        projectSlider.scrollBy({ left: scrollAmount * direction, behavior: 'smooth' });
+    }
+
+    prevProjectBtn?.addEventListener('click', () => scrollProjectCards(-1));
+    nextProjectBtn?.addEventListener('click', () => scrollProjectCards(1));
 });
+
+function initProjectDots() {
+    const projectList = document.querySelector('.project-list');
+    const dotsContainer = document.querySelector('.project-indicators');
+    if (!projectList || !dotsContainer) return;
+
+    const cards = Array.from(projectList.querySelectorAll('.project-swiper'));
+    if (!cards.length) return;
+
+    dotsContainer.innerHTML = '';
+    cards.forEach((card, index) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'project-dot' + (index === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', `Go to project ${index + 1}`);
+        dot.addEventListener('click', () => {
+            card.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+        });
+        dotsContainer.appendChild(dot);
+    });
+
+    function updateActiveDot() {
+        const listRect = projectList.getBoundingClientRect();
+        const center = listRect.left + listRect.width / 2;
+        let closestIndex = 0;
+        let minDistance = Infinity;
+
+        cards.forEach((card, index) => {
+            const cardRect = card.getBoundingClientRect();
+            const cardCenter = cardRect.left + cardRect.width / 2;
+            const distance = Math.abs(cardCenter - center);
+            if (distance < minDistance) {
+                minDistance = distance;
+                closestIndex = index;
+            }
+        });
+
+        dotsContainer.querySelectorAll('.project-dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === closestIndex);
+        });
+    }
+
+    projectList.addEventListener('scroll', () => {
+        window.requestAnimationFrame(updateActiveDot);
+    });
+
+    window.addEventListener('resize', () => {
+        window.requestAnimationFrame(updateActiveDot);
+    });
+}
 
  
 
