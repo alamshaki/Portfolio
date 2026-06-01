@@ -1972,6 +1972,7 @@ footer ul li i{
   color: white;
   font-size: clamp(2rem, 3.5vw, 3rem);
   font-weight: 700;
+  font-size: 35px;
 }
 
 .why-hero p {
